@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1726">
+  <title>Mountain Operations Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Mountain Operations dashboard">
+        <span class="brand-mark">M</span>
+        <span><strong>Mountain Operations</strong><small>Park City • Daily Briefing</small></span>
+      </a>
+      <div class="topbar-right">
+        <div class="live-indicator"><span></span> Live board</div>
+        <a class="admin-link" href="admin.html">Admin <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> OPERATIONS OVERVIEW</div>
+          <h1>Daily Briefing</h1>
+          <p class="subheading">The latest updates for teams across the mountain.</p>
+        </div>
+        <div class="date-card"><span class="date-icon">◷</span><span id="today-label">Today</span></div>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Operations updates">
+        <article class="panel panel-schedule" data-card="safety">
+          <div class="panel-heading"><span class="panel-icon icon-blue">▦</span><span class="panel-kicker">TODAY</span><span class="panel-dot"></span></div>
+          <h2>Safety</h2><div class="panel-content" data-content="safety"></div>
+        </article>
+        <article class="panel panel-general" data-card="general">
+          <div class="panel-heading"><span class="panel-icon icon-amber">✳</span><span class="panel-kicker">KEY DETAILS</span><span class="panel-dot"></span></div>
+          <h2>General Info</h2><div class="panel-content" data-content="general"></div>
+        </article>
+        <article class="panel panel-quote" data-card="quote">
+          <div class="panel-heading"><span class="panel-icon icon-violet">❝</span><span class="panel-kicker">A MOMENT OF INSPIRATION</span><span class="panel-dot"></span></div>
+          <h2>Inspirational Quote</h2><div class="panel-content" data-content="quote"></div>
+        </article>
+        <article class="panel panel-ops" data-card="cv">
+          <div class="panel-heading"><span class="panel-icon icon-teal">◆</span><span class="panel-kicker">CANYONS VILLAGE</span><span class="panel-dot"></span></div>
+          <h2>CV Daily Ops</h2><div class="panel-content" data-content="cv"></div>
+        </article>
+        <article class="panel panel-ops" data-card="mv">
+          <div class="panel-heading"><span class="panel-icon icon-orange">◆</span><span class="panel-kicker">MOUNTAIN VILLAGE</span><span class="panel-dot"></span></div>
+          <h2>MV Daily Ops</h2><div class="panel-content" data-content="mv"></div>
+        </article>
+        <article class="panel panel-outlook" data-card="outlook">
+          <div class="panel-heading"><span class="panel-icon icon-blue">⌁</span><span class="panel-kicker">LOOKING AHEAD</span><span class="panel-dot"></span></div>
+          <h2>12-Hour Outlook</h2><div class="panel-content" data-content="outlook"></div>
+        </article>
+      </section>
+      <footer class="footer"><span>Mountain Operations</span><span id="updated-label">Board information is maintained by your team.</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
