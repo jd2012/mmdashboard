@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1726">
+  <title>Admin • Mountain Operations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Mountain Operations dashboard">
+        <span class="brand-mark">M</span>
+        <span><strong>Mountain Operations</strong><small>Board administration</small></span>
+      </a>
+      <div class="topbar-right"><a class="admin-link" href="index.html">← Dashboard</a></div>
+    </header>
+    <main class="admin-main">
+      <section class="page-heading admin-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> BOARD SETTINGS</div><h1>Manage updates</h1><p class="subheading">Edit the information shown in each dashboard box.</p></div>
+      </section>
+      <div class="prototype-notice"><span class="notice-icon">i</span><div><strong>Local prototype</strong><p>Login and changes are stored in this browser only. Before this is used by a team, connect a secure server for shared accounts and saved updates.</p></div></div>
+
+      <section id="auth-panel" class="auth-panel panel">
+        <div class="auth-mark">M</div>
+        <div class="eyebrow">ADMIN ACCESS</div>
+        <h2 id="auth-title">Set up admin access</h2>
+        <p id="auth-copy">Create a local username and password for this browser.</p>
+        <form id="auth-form" class="auth-form">
+          <label>Username<input id="auth-username" name="username" autocomplete="username" required></label>
+          <label>Password<input id="auth-password" name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+          <label id="confirm-label">Confirm password<input id="auth-confirm" type="password" autocomplete="new-password" minlength="8"></label>
+          <p class="form-error" id="auth-error" aria-live="polite"></p>
+          <button class="button button-primary" id="auth-submit" type="submit">Create local admin</button>
+        </form>
+      </section>
+
+      <section id="editor-panel" class="editor-panel" hidden>
+        <div class="editor-topline"><div><h2>Dashboard content</h2><p>Keep each note short so it stays easy to scan.</p></div><button class="button button-quiet" id="sign-out" type="button">Sign out</button></div>
+        <form id="editor-form">
+          <div id="editor-fields" class="editor-grid"></div>
+          <div class="save-row"><p id="save-status" aria-live="polite">Changes are saved to this browser.</p><div><button class="button button-quiet" id="reset-demo" type="button">Reset sample content</button><button class="button button-primary" type="submit">Save updates</button></div></div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
