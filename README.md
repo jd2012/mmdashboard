@@ -7,6 +7,10 @@ A responsive GitHub Pages starter based on the supplied dashboard sketch.
 - `index.html` — dashboard with Safety, General Info, Inspirational Quote, CV Daily Ops, MV Daily Ops, and 12-Hour Outlook boxes.
 - `admin.html` — separate local admin setup/sign-in page and editor for box headings and content.
 
+## Locker-room display
+
+On landscape television-sized screens, the dashboard switches to a high-contrast dark theme with six large cards in a two-row grid. Use the browser in full-screen or kiosk mode; the Admin shortcut is hidden on the display layout and remains available at `/admin.html`.
+
 ## Prototype behavior
 
 The editor stores data in the current browser's `localStorage`. On the first visit to Admin in a browser, create a local username and password. The session ends when the browser session ends. Content and credentials do not synchronize between devices or browsers.
